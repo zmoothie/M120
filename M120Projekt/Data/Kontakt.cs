@@ -30,20 +30,21 @@ namespace M120Projekt.Data
         public Int64 Farbe { get; set; }
         [Required]
         public Boolean Favorit { get; set; }
+        [Required]
         public DateTime Geburtstag { get; set; }
 
 
         #endregion
         #region Applikationsschicht
         public Kontakt() { }
-        [NotMapped]
-        public String BerechnetesAttribut
-        {
-            get
-            {
-                return "Im Getter kann Code eingefügt werden für berechnete Attribute";
-            }
-        }
+        //[NotMapped]
+        //public String BerechnetesAttribut
+        //{
+        //    get
+        //    {
+        //        return "Im Getter kann Code eingefügt werden für berechnete Attribute";
+        //    }
+        //}
         public static List<Kontakt> LesenAlle()
         {
             using (var db = new Context())

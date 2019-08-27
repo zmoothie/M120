@@ -12,7 +12,7 @@ namespace M120Projekt
             InitializeComponent();
             // Aufruf diverse APIDemo Methoden
             APIDemo.KontaktCreate();
-            APIDemo.DemoACreateKurz();
+            //APIDemo.DemoACreateKurz();
             APIDemo.DemoARead();
             APIDemo.DemoAUpdate();
             APIDemo.DemoARead();
