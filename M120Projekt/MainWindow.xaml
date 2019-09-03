@@ -1,12 +1,13 @@
-﻿<Window x:Class="M120Projekt.MainWindow" Background="LightGray" MaxHeight="750" MinHeight="750" MaxWidth="510" MinWidth="510"
+﻿<Window x:Class="M120Projekt.MainWindow" Background="LightGray" Height="750" Width="510"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:M120Projekt"
         mc:Ignorable="d"
-        Title="MainWindow" Height="734" Width="484" >
-    <Grid MaxHeight="750" MinHeight="750" MaxWidth="510" MinWidth="510" Margin="1,0,1,1">
+        Title="MainWindow"
+        ResizeMode="CanMinimize">
+    <Grid Margin="1,0,1,1">
         <Grid.RowDefinitions>
             <RowDefinition Height="25*"/>
             <RowDefinition Height="700*"/>
