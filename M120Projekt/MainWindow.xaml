@@ -1,12 +1,29 @@
-﻿<Window x:Class="M120Projekt.MainWindow"
+﻿<Window x:Class="M120Projekt.MainWindow" Background="LightGray" MaxHeight="750" MinHeight="750" MaxWidth="510" MinWidth="510"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:M120Projekt"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="MainWindow" Height="734" Width="484" >
+    <Grid MaxHeight="750" MinHeight="750" MaxWidth="510" MinWidth="510" Margin="1,0,1,1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="700*"/>
+            <RowDefinition Height="25*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="addBTN" Background="DarkGray" Content="Neu" HorizontalAlignment="Left" Margin="175,624,0,0" VerticalAlignment="Top" Width="100" Height="40" Grid.Column="1" Grid.Row="1" FontSize="20"/>
+        <Grid Grid.Column="1" Background="DimGray" HorizontalAlignment="Left" Height="250" VerticalAlignment="Top" Width="450" Grid.Row="1">
+            <Label Content="Favoriten:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" Padding="0"/>
+        </Grid>
+        <Grid Grid.Column="1" Background="DimGray" HorizontalAlignment="Left" Height="325" Margin="0,275,0,0" VerticalAlignment="Top" Width="450" Grid.Row="1">
+            <Label Content="Alle Kontake:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" Padding="0"/>
+        </Grid>
+
     </Grid>
 </Window>
