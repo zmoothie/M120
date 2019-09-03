@@ -6,25 +6,30 @@
         xmlns:local="clr-namespace:M120Projekt"
         mc:Ignorable="d"
         Title="MainWindow"
-        ResizeMode="CanMinimize">
-    <Grid Margin="1,0,1,1">
+        ResizeMode="CanMinimize"
+        Icon="C:\Users\vmadmin\Desktop\M120Projekt\M120Projekt\contacts_icon.ico">
+    <Grid Name="body">
         <Grid.RowDefinitions>
-            <RowDefinition Height="25*"/>
-            <RowDefinition Height="700*"/>
-            <RowDefinition Height="25*"/>
+            <RowDefinition/>
+            <RowDefinition Height="29*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition Width="18*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="addBTN" Background="DarkGray" Content="Neu" HorizontalAlignment="Left" Margin="175,624,0,0" VerticalAlignment="Top" Width="100" Height="40" Grid.Column="1" Grid.Row="1" FontSize="20"/>
-        <Grid Grid.Column="1" Background="DimGray" HorizontalAlignment="Left" Height="250" VerticalAlignment="Top" Width="450" Grid.Row="1">
-            <Label Content="Favoriten:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" Padding="0"/>
+
+        <Grid Name="favouritsGrid" Grid.Column="1" Background="DimGray" HorizontalAlignment="Left" Height="250" VerticalAlignment="Top" Width="450" Grid.Row="1">
+            <Label Name="favourites" Content="Favoriten:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" Padding="0"/>
         </Grid>
-        <Grid Grid.Column="1" Background="DimGray" HorizontalAlignment="Left" Height="325" Margin="0,275,0,0" VerticalAlignment="Top" Width="450" Grid.Row="1">
-            <Label Content="Alle Kontake:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" Padding="0"/>
+        
+        <Grid Name="allContactsGrid" Grid.Column="1" Background="DimGray" HorizontalAlignment="Left" Height="325" Margin="0,275,0,0" VerticalAlignment="Top" Width="450" Grid.Row="1">
+            <Label Name="allContacts" Content="Alle Kontake:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" Padding="0"/>
         </Grid>
+
+        <Button x:Name="addBTN" Background="DarkGray" HorizontalAlignment="Left" Margin="175,622,0,0" VerticalAlignment="Top" Width="100" Height="50" Grid.Column="1" Grid.Row="1" FontSize="20" Cursor="Hand">
+            <Image Source="C:\Users\vmadmin\Desktop\M120Projekt\M120Projekt\plus_icon.ico" Stretch="None"></Image>
+        </Button>
 
     </Grid>
 </Window>
