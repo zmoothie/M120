@@ -17,5 +17,13 @@ namespace M120Projekt
             APIDemo.DemoAUpdate();
             APIDemo.DemoARead();
         }
+
+        private void AddBTN_Click(object sender, RoutedEventArgs e)
+        {
+            details details = new details();
+            details.Owner = this;
+            details.Owner.Hide();
+            details.ShowDialog();
+        }
     }
 }

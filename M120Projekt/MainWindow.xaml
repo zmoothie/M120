@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:M120Projekt"
         mc:Ignorable="d"
-        Title="MainWindow"
+        Title="Contactlist"
         ResizeMode="CanMinimize"
-        Icon="C:\Users\vmadmin\Desktop\M120Projekt\M120Projekt\contacts_icon.ico">
+        Icon="Icons/contacts_icon.ico">
     <Grid Name="body">
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -27,8 +27,8 @@
             <Label Name="allContacts" Content="Alle Kontake:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" Padding="0"/>
         </Grid>
 
-        <Button x:Name="addBTN" Background="DarkGray" HorizontalAlignment="Left" Margin="175,622,0,0" VerticalAlignment="Top" Width="100" Height="50" Grid.Column="1" Grid.Row="1" FontSize="20" Cursor="Hand">
-            <Image Source="C:\Users\vmadmin\Desktop\M120Projekt\M120Projekt\plus_icon.ico" Stretch="None"></Image>
+        <Button x:Name="addBTN" Background="DarkGray" HorizontalAlignment="Left" Margin="175,622,0,0" VerticalAlignment="Top" Width="100" Height="50" Grid.Column="1" Grid.Row="1" FontSize="20" Cursor="Hand" Click="AddBTN_Click">
+            <Image Source="Icons/plus_icon.ico" Stretch="None"></Image>
         </Button>
 
     </Grid>

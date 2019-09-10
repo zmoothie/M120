@@ -35,7 +35,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>plus_icon.ico</ApplicationIcon>
+    <ApplicationIcon>Icons\cancel_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -65,6 +65,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="UserAll.xaml.cs">
+      <DependentUpon>UserAll.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserFavourites.xaml.cs">
+      <DependentUpon>UserFavourites.xaml</DependentUpon>
+    </Compile>
+    <Page Include="details.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -76,10 +86,21 @@
     </Compile>
     <Compile Include="Data\Kontakt.cs" />
     <Compile Include="Data\Context.cs" />
+    <Compile Include="details.xaml.cs">
+      <DependentUpon>details.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="UserAll.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserFavourites.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Migrations\Configuration.cs" />
@@ -111,10 +132,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="plus_icon.ico" />
+    <Resource Include="Icons\plus_icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="contacts_icon.ico" />
+    <Resource Include="Icons\contacts_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\delete_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\save_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\cancel_icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
