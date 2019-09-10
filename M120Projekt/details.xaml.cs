@@ -32,6 +32,52 @@ namespace M120Projekt
             details.ShowDialog();
         }
 
-        
+        private void SaveBTN_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("Bish dr sicher?", "Bish dr sicher?", MessageBoxButton.YesNoCancel);
+            switch (result)
+            {
+                case MessageBoxResult.Yes:
+                    MessageBox.Show("Supi, wird aues gspicheret!", "Supi!!!");
+                    Close();
+                    Owner.Show();
+                    break;
+                case MessageBoxResult.No:
+                    MessageBox.Show("oke, de machs doch no shneu richtig", "Du paias");
+                    break;
+            }
+        }
+
+        private void CancelBTN_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("Bish dr sicher?", "Bish dr sicher?", MessageBoxButton.YesNoCancel);
+            switch (result)
+            {
+                case MessageBoxResult.Yes:
+                    MessageBox.Show("Easy, de gömr doch zrüg", "wend meinsh");
+                    Close();
+                    Owner.Show();
+                    break;
+                case MessageBoxResult.No:
+                    MessageBox.Show("oke, de blibe mr glich no shneu hie", "Du paias");
+                    break;
+            }
+        }
+
+        private void DeleteBTN_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("Bish dr sicher?", "Bish dr sicher?", MessageBoxButton.YesNoCancel);
+            switch (result)
+            {
+                case MessageBoxResult.Yes:
+                    MessageBox.Show("Easy, de düemr ds doch löschä", "wird glösht");
+                    Close();
+                    Owner.Show();
+                    break;
+                case MessageBoxResult.No:
+                    MessageBox.Show("oke, de hesh abr nomau glück gha", "Du paias");
+                    break;
+            }
+        }
     }
 }

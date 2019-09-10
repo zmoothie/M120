@@ -22,7 +22,6 @@ namespace M120Projekt
         {
             details details = new details();
             details.Owner = this;
-            details.Owner.Hide();
             details.ShowDialog();
         }
     }
