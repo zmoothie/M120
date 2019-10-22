@@ -20,27 +20,24 @@
             <ColumnDefinition Width="15*"/>
         </Grid.ColumnDefinitions>
 
-        <Button x:Name="cancelBTN" 
+        <Button x:Name="createBTN" 
                 Grid.Column="1" 
                 Grid.Row="1"
-                Background="DarkGray" 
+                Background="DimGray" 
                 HorizontalAlignment="Left" 
                 Margin="180,630,0,0" 
                 VerticalAlignment="Top" 
                 Width="100" 
                 Height="50" 
                 FontSize="20" 
-                Cursor="Hand" Click="CancelBTN_Click">
-            <Image 
-                    Source="Icons/cancel_icon.ico" 
-                    Stretch="None">
-            </Image>
+                Cursor="Hand" Click="CreateBTN_Click">
+            <Image Source="Icons/plus_icon.ico" Stretch="None"></Image>
         </Button>
 
         <Button x:Name="deleteBTN" 
                 Grid.Column="1" 
                 Grid.Row="1"
-                Background="DarkGray" 
+                Background="DimGray" 
                 HorizontalAlignment="Left" 
                 Margin="50,630,0,0" 
                 VerticalAlignment="Top" 
@@ -57,7 +54,7 @@
         <Button x:Name="saveBTN" 
                 Grid.Column="1" 
                 Grid.Row="1"
-                Background="DarkGray" 
+                Background="DimGray" 
                 HorizontalAlignment="Right" 
                 Margin="0,630,50,0" 
                 VerticalAlignment="Top" 
@@ -67,8 +64,7 @@
                 Cursor="Hand" Click="SaveBTN_Click">
             <Image 
                     Source="Icons/save_icon.ico" 
-                    Stretch="None">
-            </Image>
+                    Stretch="None"/>
         </Button>
 
         <TextBox Name="SurnameTB" 
@@ -80,9 +76,10 @@
                  Margin="10,0,0,0" 
                  Padding="0,2,0,0" 
                  TextWrapping="NoWrap"  
-                 Text="Vorname" 
                  VerticalAlignment="Top" 
-                 FontSize="24"/>
+                 FontSize="24"
+                 GotFocus="SurnameTB_GotFocus"
+                 LostFocus="SurnameTB_LostFocus"/>
 
         <TextBox Name="NameTB" 
                  Grid.Column="1" 
@@ -92,9 +89,10 @@
                  Width="217" 
                  Margin="233,0,0,0" 
                  Padding="0,2,0,0" 
-                 Text="Name" 
                  VerticalAlignment="Top" 
-                 FontSize="24"/>
+                 FontSize="24" 
+                 GotFocus="NameTB_GotFocus"
+                 LostFocus="NameTB_LostFocus"/>
 
         <TextBox Name="StreetTB" 
                  Grid.Column="1" 
@@ -106,7 +104,9 @@
                  Padding="0,2,0,0" 
                  Text="Strasse" 
                  VerticalAlignment="Top" 
-                 FontSize="24"/>
+                 FontSize="24" 
+                 GotFocus="StreetTB_GotFocus"
+                 LostFocus="StreetTB_LostFocus"/>
 
         <TextBox Name="CityTB" 
                  Grid.Column="1" 
@@ -118,7 +118,9 @@
                  Padding="0,2,0,0" 
                  Text="Ort" 
                  VerticalAlignment="Top" 
-                 FontSize="24"/>
+                 FontSize="24" 
+                 GotFocus="CityTB_GotFocus"
+                 LostFocus="CityTB_LostFocus"/>
 
         <TextBox Name="ZIPTB" 
                  Grid.Column="1" 
@@ -131,7 +133,10 @@
                  Text="PLZ" 
                  VerticalAlignment="Top" 
                  FontSize="24" 
-                 TextOptions.TextHintingMode="Fixed"/>
+                 TextOptions.TextHintingMode="Fixed" 
+                 GotFocus="ZIPTB_GotFocus"
+                 LostFocus="ZIPTB_LostFocus" 
+                />
 
         <TextBox Name="MobileNrTB" 
                  Grid.Column="1" 
@@ -142,7 +147,9 @@
                  Padding="0,2,0,0" 
                  Text="Telefon (Privat)" 
                  VerticalAlignment="Top" 
-                 FontSize="24"/>
+                 FontSize="24" 
+                 GotFocus="MobileNrTB_GotFocus"
+                 LostFocus="MobileNrTB_LostFocus"/>
 
         <TextBox Name="BusinessNrTB" 
                  Grid.Column="1" 
@@ -154,7 +161,9 @@
                  Padding="0,2,0,0" 
                  Text="Telefon (Geschäft)" 
                  VerticalAlignment="Top" 
-                 FontSize="24"/>
+                 FontSize="24" 
+                 GotFocus="BusinessNrTB_GotFocus"
+                 LostFocus="BusinessNrTB_LostFocus"/>
 
         <TextBox Name="EmailTB" 
                  Grid.Column="1" 
@@ -166,49 +175,48 @@
                  Padding="0,2,0,0" 
                  Text="Email" 
                  VerticalAlignment="Top" 
-                 FontSize="24"/>
-
-        <ComboBox Name="ColorDD" 
-                  Grid.Column="1" 
-                  Grid.Row="1" 
-                  HorizontalAlignment="Left" 
-                  Height="40" 
-                  Width="217" 
-                  Margin="10,225,0,0" 
-                  VerticalAlignment="Top"/>
+                 FontSize="24" 
+                 GotFocus="EmailTB_GotFocus"
+                 LostFocus="EmailTB_LostFocus"/>
 
         <DatePicker Name="BirthdayDP" 
                     Grid.Column="1" 
                     Grid.Row="1" 
                     HorizontalAlignment="Left" 
                     Height="40" 
-                    Width="240"
-                    Margin="125,309,0,0" 
+                    Width="235"
+                    Margin="215,225,0,0" 
                     VerticalAlignment="Top" 
                     IsTodayHighlighted="True" 
                     SelectedDateFormat="Short"
                     FontSize="24"
                     RenderTransformOrigin="0,0"/>
+
+        <CheckBox Name="FavouritCB"
+                  HorizontalAlignment="Left" 
+                  Content="?Favorit"  
+                  VerticalAlignment="Top" 
+                  FontSize="25" 
+                  FlowDirection="RightToLeft" 
+                  HorizontalContentAlignment="Right" 
+                  Width="200"
+                  Height="40"
+                  Grid.Column="1" 
+                  Margin="10,225,0,0"
+                  Grid.Row="1"/>
         
-        
-        <StackPanel Name="FavouritSP"
-                    Grid.Column="1" 
-                    Grid.Row="1" 
-                    HorizontalAlignment="Left" 
-                    Height="40" 
-                    Width="200" 
-                    Margin="141,445,0,0" 
-                    VerticalAlignment="Top">
-            <CheckBox x:Name="FavouritCB"
-                            HorizontalAlignment="Left" 
-                            Content="?Favorit"  
-                            VerticalAlignment="Top" 
-                            FontSize="24" 
-                            FlowDirection="RightToLeft" 
-                            HorizontalContentAlignment="Right" 
-                            Width="200"
-                            Height="40"/>
-        </StackPanel>
+        <Label x:Name="validLBL" 
+               Content=""
+               Grid.Column="1" 
+               HorizontalAlignment="Left" 
+               Margin="50,490,0,0"
+               Grid.Row="1" 
+               VerticalAlignment="Top" 
+               Height="116"
+               Width="360"
+               Background="DarkGray"/>
+        <Label x:Name="labelID" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="189,402,0,0" Grid.Row="1" VerticalAlignment="Top" IsEnabled="False" Opacity="0"/>
+
 
     </Grid>
 </Window>

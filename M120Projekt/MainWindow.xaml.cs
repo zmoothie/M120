@@ -16,11 +16,24 @@ namespace M120Projekt
             APIDemo.DemoARead();
             APIDemo.DemoAUpdate();
             APIDemo.DemoARead();
+
+            TestTXT.AppendText(Data.Kontakt.LesenID(1).Name + " " + Data.Kontakt.LesenID(1).Vorname);
         }
 
         private void AddBTN_Click(object sender, RoutedEventArgs e)
         {
             details details = new details();
+            details.Owner = this;
+            details.ShowDialog();
+
+            details.saveBTN.IsEnabled = false;
+        }
+
+        private void loadData(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            details details = new details();
+            details.createBTN.IsEnabled = false;
+            details.ReadData(3);
             details.Owner = this;
             details.ShowDialog();
         }

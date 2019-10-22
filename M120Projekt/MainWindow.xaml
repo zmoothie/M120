@@ -19,15 +19,16 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <Grid Name="favouritsGrid" Grid.Column="1" Background="DimGray" HorizontalAlignment="Left" Height="250" VerticalAlignment="Top" Width="450" Grid.Row="1">
+        <Grid Name="favouritsGrid" Grid.Column="1" Background="DarkGray" HorizontalAlignment="Left" Height="250" VerticalAlignment="Top" Width="450" Grid.Row="1">
             <Label Name="favourites" Content="Favoriten:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" Padding="0"/>
+            <TextBox x:Name="TestTXT" HorizontalAlignment="Left" Margin="10,36,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="20" Width="430" MouseDoubleClick="loadData"/>
         </Grid>
-        
-        <Grid Name="allContactsGrid" Grid.Column="1" Background="DimGray" HorizontalAlignment="Left" Height="325" Margin="0,275,0,0" VerticalAlignment="Top" Width="450" Grid.Row="1">
+
+        <Grid Name="allContactsGrid" Grid.Column="1" Background="DarkGray" HorizontalAlignment="Left" Height="325" Margin="0,275,0,0" VerticalAlignment="Top" Width="450" Grid.Row="1">
             <Label Name="allContacts" Content="Alle Kontake:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" Padding="0"/>
         </Grid>
 
-        <Button x:Name="addBTN" Background="DarkGray" HorizontalAlignment="Left" Margin="175,622,0,0" VerticalAlignment="Top" Width="100" Height="50" Grid.Column="1" Grid.Row="1" FontSize="20" Cursor="Hand" Click="AddBTN_Click">
+        <Button x:Name="addBTN" Background="DimGray" HorizontalAlignment="Left" Margin="175,622,0,0" VerticalAlignment="Top" Width="100" Height="50" Grid.Column="1" Grid.Row="1" FontSize="20" Cursor="Hand" Click="AddBTN_Click">
             <Image Source="Icons/plus_icon.ico" Stretch="None"></Image>
         </Button>
 
